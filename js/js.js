@@ -1,0 +1,13 @@
+$(document).ready(function () {
+   
+    var wow = new WOW({
+        mobile:false
+    });
+    wow.init();
+    /* ‫ إلغاء الحركة في شاشات الجوال وتهيئة مكتبة wow للعمل
+     تلغى التأثيرات فقط فى النسخة اقل من 4 فى مقاس الجوال*/
+     
+     
+    $( function (){ $("#emailForm").validate();
+    });
+});
