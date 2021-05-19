@@ -3,16 +3,17 @@ section.banner {
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-    position: relative;
-    /*حتى تاخذ العناصر  موقع نسبي بالنسبة لحاوية  التي  تقع ضمنها*/
-    z-index: -3;
+    /* position: relative;
+    /*حتى تاخذ العناصر  موقع نسبي بالنسبة لحاوية  التي  تقع ضمنها
+    z-index: -3; */
     text-align: right;
     /* bootstrap حتى يتناسب مع النسخة الحديثة من */
 }
 
 section.banner .overlay {
     background-color: rgba(239, 71, 58, 0.8);
-    z-index: -2;
+    /* z-index: -2; */
+    z-index: 1;
     position: relative;
     padding-top: 90px;
 }
@@ -34,7 +35,7 @@ section.banner .images {
     position: absolute;
     bottom: -250px;
     right: 0;
-    z-index: -1;
+    z-index: 2;
     /*حتى تظهر امام الطبقة اوفرلاي*/
 }
 
@@ -51,6 +52,10 @@ section.banner .app-icon img {
 
 /* h1 تنسيقات الخط وضبط الهامش في العنوان */
 
+section.banner .banner-text {
+    position: relative;
+    z-index: 2;
+}
 section.banner .banner-text h1 {
     font-size: 30px;
     color: #ffffff;
@@ -68,14 +73,17 @@ section.banner .banner-text h1 {
 }
 
 /* تنسيقات لون الأزرار والمسافات الخاصة به */
-
-.banner-text button {
+.banner-text button{
     line-height: 50px;
     /*حتى  ياخذ الزرين نفس الارتفاع*/
     margin: 40px 0;
     background-color: #fafafa;
 }
 
+/* .banner-text ::ng-deep button *{
+    cursor: pointer !important;
+   pointer-events: auto;
+} */
 /* تنسيق أيقونة متجر جوجل وأبل */
 
 .banner-text button img {
@@ -114,6 +122,8 @@ section.banner .banner-text h1 {
 section.feature {
     background-color: #ffffff;
     padding: 80px 0;
+    position: relative;
+    z-index: 3;
     /*  text-align: right; */
     /* bootstrap حتى يتناسب مع النسخة الحديثة من */
 }
